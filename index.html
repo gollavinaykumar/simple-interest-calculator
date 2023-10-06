@@ -78,6 +78,11 @@
         dropdown.appendChild(option1);
         div5.appendChild(dropdown);
 
+        const option2 = document.createElement("option");
+        option2.classList.add("option2");
+        option2.innerText = "days";
+        dropdown.appendChild(option2);
+
 
         let button1 = document.createElement("button");
         button1.classList.add("b1");
@@ -87,8 +92,7 @@
             let a = Number(document.querySelector(".p11").value);//principal
             let b = Number(document.querySelector(".p111").value);//time
             let c = Number(document.querySelector(".p1111").value);//rate
-            let d = String(document.querySelector(".option").value);//year
-            let e = String(document.querySelector(".option1").value);//month
+
 
             if (dropdown.value == "year") {
                 let f = b * 365;
@@ -98,9 +102,18 @@
                 document.querySelector(".p2").innerHTML = "Total Interest :" + sum;
                 document.querySelector(".p3").innerHTML = "Total Amount :" + sum1;
             }
-            else {
+            else if (dropdown.value == "month") {
                 let g = b * 30;
                 let sum = a / 30 * c * g / 100;
+                let sum1 = a + sum;
+                document.querySelector(".p1").innerHTML = "Principal Amount :" + a;
+                document.querySelector(".p2").innerHTML = "Total Interest :" + sum;
+                document.querySelector(".p3").innerHTML = "Total Amount :" + sum1;
+            }
+            else if (dropdown.value == "days") {
+                debugger;
+                let z = b * 1;
+                let sum = a / 30 * c * z / 100;
                 let sum1 = a + sum;
                 document.querySelector(".p1").innerHTML = "Principal Amount :" + a;
                 document.querySelector(".p2").innerHTML = "Total Interest :" + sum;
