@@ -96,16 +96,16 @@
 
             if (dropdown.value == "year") {
                 let f = b * 365;
-                let sum = a / 30 * c * f / 100;
-                let sum1 = a + sum;
+                let sum = Math.round(a / 30 * c * f / 100);
+                let sum1 = Math.round(a + sum);
                 document.querySelector(".p1").innerHTML = "Principal Amount :" + a;
                 document.querySelector(".p2").innerHTML = "Total Interest :" + sum;
                 document.querySelector(".p3").innerHTML = "Total Amount :" + sum1;
             }
             else if (dropdown.value == "month") {
                 let g = b * 30;
-                let sum = a / 30 * c * g / 100;
-                let sum1 = a + sum;
+                let sum = Math.round(a / 30 * c * g / 100);
+                let sum1 = Math.round(a + sum);
                 document.querySelector(".p1").innerHTML = "Principal Amount :" + a;
                 document.querySelector(".p2").innerHTML = "Total Interest :" + sum;
                 document.querySelector(".p3").innerHTML = "Total Amount :" + sum1;
@@ -113,8 +113,8 @@
             else if (dropdown.value == "days") {
                 debugger;
                 let z = b * 1;
-                let sum = a / 30 * c * z / 100;
-                let sum1 = a + sum;
+                let sum = Math.round(a / 30 * c * z / 100);
+                let sum1 = Math.round(a + sum);
                 document.querySelector(".p1").innerHTML = "Principal Amount :" + a;
                 document.querySelector(".p2").innerHTML = "Total Interest :" + sum;
                 document.querySelector(".p3").innerHTML = "Total Amount :" + sum1;
